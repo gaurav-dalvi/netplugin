@@ -177,13 +177,10 @@ func CreateNetwork(network intent.ConfigNetwork, stateDriver core.StateDriver, t
 		return nil
 	}
 
+	// Skip docker network creation for ACI fabric mode.
 	aci, _ := IsAciConfigured()
-	if aci {
-		// Skip docker network creation for ACI fabric mode.
-		return nil
-	}
 
-	if GetClusterMode() == "docker" {
+	if GetClusterMode() == "docker" && aci == false {
 		// Create the network in docker
 		err = docknet.CreateDockNet(tenantName, network.Name, "", nwCfg)
 		if err != nil {
