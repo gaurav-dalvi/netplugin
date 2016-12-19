@@ -8,19 +8,6 @@ Download tarball for the version you want to try.
   - `netplugin` and `netmaster` are main binaries which are part of contiv networking.
   - `netctl` is command line utinlity you will need to talk to netmaster.
 
-Supported OS:
-   - Contiv right now officially supports centos7
-
-Supported Versions:
-
-| Software        | Supported version   |
-| ------------- |:-------------:|
-| Docker Engine      | 1.10, 1.11, 1.12 |
-| Docker Swarm      | 1.2.0 |
-| Kubenetes      | 1.4 |
-| etcd      | 2.3.0 |
-| Consul | 0.6.4 |
-
 ## How to start netmaster ? 
 
 We recommend starting netmaster on master node in your master slave architecture. You can start netmaster in HA mode and appropriate netmaster node will handle all the queries from end user. 
