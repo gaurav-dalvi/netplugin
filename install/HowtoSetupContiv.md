@@ -70,5 +70,6 @@ where,
 eno33559296 = Data interface of the node on which this netplugin is running
 10.193.246.2 = Control IP of my node
 plugin mode can be either docker or k8s
+vtep-ip : etcd master machine's control interface. This is optional.
 ```
 
